@@ -1,34 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/styles.css" />
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
-    <title>Lista de Tareas </title>
-  </head>
-  <div id="app">
-    <section class="section">
-        <div class="container">
-            <h1 class="title">Lista de tareas</h1>
-            <div class="box">
-                <h3 class="subtitle"><i>{{ name }}</i></h3>
-                <div class="box" v-for="(t,i) in tasks"><span>{{ t.title }} | {{ t.time }}</span><button class="button is-danger is-small is-x" @click="removeTask(i)">&times;</button></div>
-                <div class="isEmpty" v-show="isEmpty">
-                    <p>¡No tiene ninguna tarea <strong>🙁</strong> !</p>
-                    <p>Presione <span>agregar</span> para crear una nueva tarea</p>
-                </div>
-                <form class="field has-addons" @submit.prevent="addTask">
-                    <div class="control is-expanded"><input class="input" v-model="newTask.title" type="text" placeholder="Titulo" required="required" /></div>
-                    <div class="control"><input class="input" v-model="newTask.time" type="time" required="required" /></div>
-                    <div class="control"><button class="button is-primary" type="submit">Agregar</button></div>
-                </form>
-            </div>
-            <p>Total de horas: <strong>{{ total }}</strong></p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+      <div class="todo-app">
+        <h2>To-Do List <img src="images/icon.png"></h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Añade una Tarea">
+          <button id="add">Añadir</button>
         </div>
-    </section>
-</div>
-  </body>
+        <ul id="list-container">
+            <li>Tarea1</li>
+            <li>Tarea2</li>
+            <li>Tarea3</li>
+        </ul>
+        </div>
+       
+</body>
 </html>
-
-
