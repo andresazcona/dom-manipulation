@@ -7,26 +7,27 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css">
     <title>Lista de Tareas </title>
   </head>
-  <body>
-    <div class="principal">
-      <div class="wrap">
-        <form class="formulario" action="">
-          <input type="text" id="tareaInput" placeholder="Agrega tu tarea">
-          <input type="button" class="boton" id="btn-agregar" value="Agregar Tarea">
-        </form>
-      </div>
-    </div>
-  
-    <div class="tareas">
-      <div class="wrap">
-        <ul class="lista" id="lista">
-          <li><a href="#">1 Lorem ipsum dolor sit amet.</a></li>
-          <li><a href="#">2 Lorem ipsum dolor sit amet.</a></li>
-          <li><a href="#">3 Lorem ipsum dolor sit amet.</a></li>
-        </ul>
-      </div>
-    </div>
-    <script src="scripts/script.js"></script>
+  <div id="app">
+    <section class="section">
+        <div class="container">
+            <h1 class="title">Lista de tareas</h1>
+            <div class="box">
+                <h3 class="subtitle"><i>{{ name }}</i></h3>
+                <div class="box" v-for="(t,i) in tasks"><span>{{ t.title }} | {{ t.time }}</span><button class="button is-danger is-small is-x" @click="removeTask(i)">&times;</button></div>
+                <div class="isEmpty" v-show="isEmpty">
+                    <p>¡No tiene ninguna tarea <strong>🙁</strong> !</p>
+                    <p>Presione <span>agregar</span> para crear una nueva tarea</p>
+                </div>
+                <form class="field has-addons" @submit.prevent="addTask">
+                    <div class="control is-expanded"><input class="input" v-model="newTask.title" type="text" placeholder="Titulo" required="required" /></div>
+                    <div class="control"><input class="input" v-model="newTask.time" type="time" required="required" /></div>
+                    <div class="control"><button class="button is-primary" type="submit">Agregar</button></div>
+                </form>
+            </div>
+            <p>Total de horas: <strong>{{ total }}</strong></p>
+        </div>
+    </section>
+</div>
   </body>
 </html>
 
