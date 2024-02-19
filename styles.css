@@ -83,6 +83,7 @@
   
   input[type="text"]::placeholder {
     color: var(--grey);
+    font-family: Helvetica, sans-serif;
   }
   
   .todo-container {
