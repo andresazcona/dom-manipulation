@@ -30,4 +30,9 @@ El diseño de la aplicación debe ser responsive y adaptarse correctamente a dif
 | HTML Semántico     | 0.5     |
 | Funcionalidad      | 3       |
 
+## Deploy
 
+Así que, resulta que GitHub Pages no me dejó publicar el proyecto porque el repositorio está configurado como privado. Me encontré en una encrucijada, sin saber qué hacer. Pero decidí hacer algo al respecto y publiqué el sitio en un hosting temporal. ¡Así que, profe, si quieres verlo en vivo, solo durará un mes! Es un hosting para enviar pruebas de producto temporales, así que si se cae, avísame y lo monto en otro hosting temporal. :)
+
+**Link:**
+https://todolistandresazcona.000webhostapp.com
