@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Tareas</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-      <div class="todo-app">
-        <h2>To-Do List <img src="images/icon.png"></h2>
-        <div class="row">
-          <input type="text" id="input-box" placeholder="Añade una Tarea">
-          <button id="add">Añadir</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+    <title>Todo</title>
+  </head>
+  <body>
+    <section class="todo">
+      <h2>To-do list</h2>
+      <div class="input">
+        <input
+          type="text"
+          class="input-field"
+          id="todoInput"
+          placeholder="Add a new todo"
+        />
+        <button class="btn">Add</button>
+      </div>
+      <ul class="scroll">
+        <li id="todoList"></li>
+      </ul>
+      <div>
+        <hr class="counter" />
+        <div class="counter-container">
+          <p><span id="todoCount">0</span> items total</p>
+          <button id="deleteButton">Delete All</button>
         </div>
-        <ul id="list-container">
-            <li>Tarea1</li>
-            <li>Tarea2</li>
-            <li>Tarea3</li>
-        </ul>
-        </div>
-       
-</body>
+      </div>
+    </section>
+    <footer>
+      <div class="footer">
+        <p class="made-by">Profe pongame</p>
+        <p class="author">5 pls</p>
+      </div>
+    </footer>
+  </body>
 </html>
